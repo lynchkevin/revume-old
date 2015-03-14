@@ -1,0 +1,31 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Login/Logout</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+        <div class="item">
+            <h3>{{user.firstName}} {{user.lastName}}</h3>
+            <h2>{{user.email}}</h2>
+            <p>{{user.company}}</p>
+        </div>
+        <div class="item item-body">
+            <p>{{user}}</p>
+        </div>
+        <div class="row">
+            <div class="col col-50">
+                <button class="button button-balanced">
+                  Login
+                </button>
+            </div>
+            <div class="col col-50">
+                <button class="button button-assertive">
+                  Logout
+                </button>
+            </div>
+        </div>
+        </div>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,94 @@
+/* Empty. Add your own CSS if you like */
+.centered-container {
+    margin-left:auto;
+    margin-right:auto;    
+    text-align: center;
+}
+.slide-container {
+    width:90%;
+}
+.bordered-drop-shadow {
+  box-shadow: 10px 10px 5px #888888;
+  border: #888888;
+  border-style: solid;
+  border-width: 3px;
+}
+.slide-content {
+    width:100%;
+}
+.slideshow-container {
+    background:rgba(79, 78, 7, 0.28);
+}
+.vid-content{
+}
+.slide-control{
+  width: 90%;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.right{
+    float:right;
+}
+.left{ 
+    float:left;
+}
+.slider-button {
+    margin-top:40%;
+}
+.half-height{
+    min-height: 40%;
+}
+
+.avatar_icon{
+    font-size:32px;
+    color:#a6bd39;
+}
+
+.user_list {
+}
+
+.presence-message.show{
+    top:70%;
+    opacity:1;
+}
+
+.presence-message{
+    -webkit-transition: 1.2s linear all;
+    transition: 1.2s linear all;    
+    position:absolute;
+    top:110%;
+    left:35%;
+    width:30%;
+    background:#424242;
+    color: white;
+    line-height: 300%;
+    font-weight:600;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    opacity:0;
+}
+
+
+@media screen and (max-width: 800px) {
+    .slider-button{ 
+        display:none;
+    }
+    .presence-message{
+        left:10%;
+        width:80%;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .user_list{
+        width:50%;
+    }
+
+}
+
+
+
+
