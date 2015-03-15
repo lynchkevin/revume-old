@@ -79,6 +79,8 @@ angular.module('starter.services')
             return this.users;
         }
         
+        
+        
         pnFactory.newChannel = function(channelName){
           var noop = function(){};
           var channel = {
@@ -89,7 +91,7 @@ angular.module('starter.services')
               hereNow : hereNow,
               history : history,
               resolveUsers : resolve,
-              users : [],
+              users: []
           };
           return channel;
         };

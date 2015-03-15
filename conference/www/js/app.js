@@ -182,7 +182,13 @@ angular.module('starter',
                 // Return a promise to make sure the customer is completely
                 // resolved before the controller is instantiated
                 return Presentation.get({id:$stateParams.id}).$promise;
-            }
+            },
+            session : function(Session,$stateParams) {
+                //hack the id from the idString
+                var id = parseInt($stateParams.sessionId[0])
+                id = id-1;
+                return Session.get({sessionId: id}).$promise;
+            }   
         },
     views: {
         'menuContent': {

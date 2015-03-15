@@ -66,6 +66,8 @@ angular.module('starter.controllers')
                 break;
             case "set" : 
                 $scope.$apply(function(){
+                    // keep hammering the name until it takes
+                    $scope.name = $scope.presentation.name;
                     $scope.setSlide(m.value);
                 });
                 break;

@@ -1,4 +1,13 @@
-<ion-view title="{{presentation.name}}">
+<ion-view view-title="{{presentation.name}}">
+    <ion-nav-buttons side="right">
+      <button class="button icon-left" ng-click="toggleShowUsers()">
+        <i class="icon ion-person-stalker" ></i>
+          <div class="user-indicator">
+                {{channel.users.length}}         
+          </div>
+      </button>
+    </ion-nav-buttons>
+    
     <ion-content class="has-header slideshow-container" scroll="false">
         <div class="centered-container slide" elem-size>    
         <div class="row">
@@ -28,6 +37,16 @@
             </div>
             <div class="col col-10 ">
                 <a class="button icon-left ion-chevron-right button-clear button-dark slider-button right" ng-click="nextSlide()">Next</a>
+                <!-- add a list of users that can float in -->
+                <div class="user-status-bar" ng-if="showUsers">
+                    
+                    <div ng-repeat="attendee in everyone" class="user-item">
+                        <i class="icon user-item-avatar" ng-class="{'user-online': attendee.isOnline, 'ion-eye-disabled user-distracted': attendee.distracted,'ion-person':!attendee.distracted}"></i>
+                        <span ng-if="attendee.itsMe != true" class="user-item-text">{{attendee.firstName}} {{attendee.lastName}}</span>
+                        <span ng-if="attendee.itsMe" class="user-item-text">You</span>
+                    </div>
+                    </div>
+                </div>
             </div>            
         </div>
         </div>

@@ -70,8 +70,77 @@
     border-radius: 10px;
     opacity:0;
 }
+.user-status-bar {
+    position:absolute;
+    top:15%;
+    width:8%;
+    margin-left:5%;
+    z-index: 10;
+    background:#424242;
+    color: white;
+    max-height:70%;
+    overflow-y:scroll;
+    padding-bottom: 4px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+    
+.user-item {
+    margin-top:1%;
+}
+.user-indicator{
+    position: absolute;
+    display:inline;
+    top:3%;
+    right:3%;
+    font-size: 90%;
+    background:#BED552;
+    text-align: center;
+    vertical-align: middle;
+    height:12px;
+    width:12px;
+    line-height: 12px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    font-weight:600;
+}
+.user-item-avatar{
+    font-size:28px;
+    display:block;
+    clear:right;
+    color:#757575;
+}
+.user-itsme {
+    color:#B5D7A4;
+}
+.user-item-text{
+   font-size:80%;
+}
+.user-online{
+        color:#a6bd39;
+}
+.user-distracted{
+    color:#fcF00A;
+}
 
-
+@media screen and (max-width: 1100px) {
+    .user-status-bar{
+        margin-left:5.0%;
+        min-width:8%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .user-status-bar{
+        top:20%;
+        min-width:8%;
+        margin-left:0.5%;
+        font-size:80%;
+    }
+    .user-item-avatar{
+        font-size:200%;
+    }
+    
+}
 @media screen and (max-width: 800px) {
     .slider-button{ 
         display:none;
@@ -79,6 +148,48 @@
     .presence-message{
         left:10%;
         width:80%;
+    }
+    .user-status-bar{
+        top:5%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .user-status-bar{
+        top:90%;
+        height:9%;
+        max-width:75%;
+        width:75%;
+        left:12%;
+        display:inline-block;
+        font-size:80%;
+        overflow-y: hidden;
+        overflow-x:scroll;
+        white-space: nowrap;
+    }
+    .user-item{
+        display:inline-block;
+        min-width:15%;
+        height:100%;
+        overflow-y:hidden;
+        line-height:100%;
+    }
+    .user-item-avatar{
+        font-size:200%;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .user-status-bar{
+        margin-top:0;
+    }
+    .user-item{
+        text-overflow: ellipsis;
+        margin-left:4px;
+    }
+
+    .user-item-avatar{
+        font-size:150%;
     }
 }
 
